@@ -1,26 +1,25 @@
 <html>
 <title>SHINE ON YOUR CRAZY DIAMOND</title>
 <?php
-if (!isset( $_POST ) || empty($_POST) ){
-    $erro = 'PREENCHA OS CAMPOS CORRETAMENTE!';
-}
-
-$pdo = pg_connect("host=localhost port=5432 dbname=cygni user=postgres password=123456");
+$pdo = new PDO('pgsql:host=localhost;dbname=cygni', 'postgres', '123456');
 
 $login = isset($_POST['login']) ? $_POST['login'] : '';
 $passwd = isset($_POST['passwd']) ? $_POST['passwd'] : '';
 
+$sql = "select * from usuario where login = '".$login."' and senha = '".$passwd."'";
 
-echo ("hello world");
-echo ("$login");
-echo ("$passwd");
+echo $sql;
 
+$result = $pdo->query($sql); 
+ 
+$row = $result->fetch(PDO::FETCH_NUM);
 
-
-
-
-
-
+if($row > 0){
+   header("location:index.html");
+}else{
+   header("location:senha_invalida.html");
+}
 
 ?>
+
 </html>

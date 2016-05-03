@@ -4,26 +4,6 @@
 body {font-family:Arial, Sans-Serif;}
 #acesso {width:500px; margin:100 auto;}
 </style>
-<script language="JavaScript" >
-function enviardados(){
- 
-    if(document.dados.tx_login.value=="" || document.dados.tx_passwd.value=="" );
-        {
-        alert( "Preencha campo Login!" );
-        document.dados.tx_login.focus();
-        return false;
-        }
-    if(document.dados.tx_passwd.value=="")
-        {
-        alert( "Preencha campo Senha!" );
-        document.dados.tx_passwd.focus();
-        return false;
-        }
-            else{
-            return true;
-        }
-} 
-</script>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -32,7 +12,7 @@ function enviardados(){
 <title>LOGIN DE USUÁRIO</title>
 <body>
 	<div id="acesso">
-	<form name="frmLogin" id="frmLogin" method="POST" action="login.php" onSubmit="return enviardados">
+	<form name="frmLogin" id="frmLogin" method="POST" action="login.php">
 	<h2>ACESSO AO SISTEMA</h2>
 	<br>
 	<br>
@@ -41,7 +21,7 @@ function enviardados(){
 	<td><label>SENHA :</label></td>
 	<td><input type="password" name="passwd" id="passwd" size="23" maxlenght="25" required></td><br>
 	<br>
-	<input type="submit" align="center" name='submit' value="LOGIN"/>
+	<input type="submit" name="submit" align="center" button type="button" class="btn btn-success" value="LOGIN">
 	<br>
 	<br>	
 	<div class="line"> 
