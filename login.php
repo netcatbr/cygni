@@ -15,9 +15,15 @@ $result = $pdo->query($sql);
 $row = $result->fetch(PDO::FETCH_NUM);
 
 if($row > 0){
-   header("location:index.html");
+    session_start();
+    $_SESSION['login'] = $login;
+    $_SESSION['senha'] = $passwd;
+    header("location:index.php");
 }else{
-   header("location:senha_invalida.html");
+    session_destroy();
+    unset ($_SESSION['login']);
+    unset ($_SESSION['senha']);
+    header("location:senha_invalida.html");
 }
 
 ?>

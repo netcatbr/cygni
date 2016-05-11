@@ -1,28 +1,43 @@
 <html>
-<style type="text/css">
-<meta charset="UTF-8">
-body {font-family:Arial, Sans-Serif;}
-#acesso {width:500px; margin:100 auto;}
-</style>
-<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<title>LOGIN DE USUÁRIO</title>
+<head>
+	<style type="text/css">
+		<meta charset="UTF-8">
+		body {font-family:Arial, Sans-Serif;}
+		#acesso {width:500px; margin:100 auto;}
+	</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <title>LOGIN DE USUÁRIO</title>
+<head>
 <body>
-	<div id="acesso">
-	<form name="frmLogin" id="frmLogin" method="POST" action="login.php">
-	<h2>ACESSO AO SISTEMA</h2>
-	<br>
-	<br>
-	<td><label>LOGIN :&nbsp;</label></td>
-	<td><input type="text" name="login" id="login" size="23" maxlenght="25" required></td><br>
-	<td><label>SENHA :</label></td>
-	<td><input type="password" name="passwd" id="passwd" size="23" maxlenght="25" required></td><br>
-	<br>
-	<input type="submit" name="submit" align="center" button type="button" class="btn btn-success" value="LOGIN">
-	<br>
-	<br>	
-	<div class="line"> 
+	<div class="container" id="acesso" align="center">
+		<form class="form-signin"name="frmLogin" id="frmLogin" method="POST" action="login.php">
+			<h2>ACESSO AO SISTEMA</h2>
+			<br>
+			<br>
+			<td><label>LOGIN :&nbsp;</label></td>
+			<td><input type="text" name="login" id="login" size="23" maxlenght="25" required></td>
+			<br>
+			<td><label>SENHA :&nbsp;</label></td>
+			<td><input type="password" name="passwd" id="passwd" size="23" maxlenght="25" required></td>
+			<br>
+			<br>
+			<label>
+		    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			    <input type="checkbox" value="remember-me"> Lembrar Usuário e Senha
+	            <br>
+	            <br>
+	            <input type="submit" name="submit" button type="button" class="btn btn-success" value="LOGIN">
+	        </label>
+			<br>
+			<br>	
+			<div class="line">
+			</div>
+		</form>
+	</div> 
 </html>
