@@ -1,3 +1,4 @@
+?php>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>MENU DO SISTEMA</title>
+    <title>CADASTRO DE SALAS</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -29,8 +30,7 @@
 <body>
 
     <div id="wrapper">
-
-        <!-- Sidebar -->
+<!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
@@ -71,8 +71,14 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1>iNDICE</h1>
-                        <p>Sistema criado para o controle de ativos e imóveis de uma empresa ou entidade afim de registrar todos os ativos e bens da empresa.</p>
+                        <h1>DEPARTAMENTOS</h1>
+                        <p>CADASTRO DE SALAS</p>
+                        <form action=""
+                        <div class="col-lg-12">
+                        <input type="text" >
+                        </div>
+                       
+                        
                         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">MENU ON/OFF</a>
                     </div>
                 </div>
@@ -100,3 +106,4 @@
 </body>
 
 </html>
+php?>
