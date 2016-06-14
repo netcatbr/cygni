@@ -1,116 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<hml>
+<title>CADASTRO DE USUARIO</title>
+<style type="text/css">
+<meta charset="UTF-8">
+body {font-family:Arial, Sans-Serif;}
+#cadastro {width:500px; margin:100 auto;}
+</style>
+<meta charset="utf-8">
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>CADASTRO DE SALAS</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/simple-sidebar.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+        <script>
+            function validarSenha(){
+            senha1 = document.f1.passc1.value
+            senha2 = document.f1.passc2.value
+            if (passc1 == passc2){
+		alert("SENHAS IGUAIS")
+            }else{
+		alert("SENHAS DIFERENTES")
+            }
+}
+</script>
 </head>
-
-<body>
-
-    <div id="wrapper">
-<!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                        MENU DO SISTEMA
-                    </a>
-                </li>
-                 <li>
-                    <a href="http://localhost/patrimonio/departamentos.html">DEPARTAMENTOS</a>
-                </li>
-                <li>
-                    <a href="http://localhost/patrimonio/tipo.html">SALAS</a>
-                </li>
-                <li>
-                    <a href="#">BEM PATRIMONIAL</a>
-                </li>
-                <li>
-                    <a href="#">LISTAR IMÓVEIS</a>
-                </li>
-                <li>
-                    <a href="http://localhost/patrimonio/cadastro.html">CADASTRO DE USUARIO</a>
-                </li>
-                <li>
-                    <a href="#">SOBRE NÓS</a>
-                </li>
-                <li>
-                    <a href="#">CONTATO</a>
-                </li>
-                <li>
-                    <a href="href=http://localhost/patrimonio/logout.php">SAIR</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
-
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <form action="cadastrar.php" method="post" align="center">
-                        <h2>CADASTRO DE USUÁRIO</h2>
-                        <div class="line"> 
-                        <label for="cadastro">Todas as informações são necessárias:  </label></div><br><br>	
-                        <td><label>LOGIN :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td>
-                        <td><input type="text" name="user" id="user" size="33" maxlenght="20" placeholder="nick do usuário"></td><br>
-                        <td><label>NOME :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td>
-                        <td><input type="text" name="nome" id="nome" size="33" maxlength="50" placeholder="Nome completo" /></td><br>
-                        <td><label>SENHA :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td>
-                        <td><input type="password" name="passc1" id="passc1" size="33" maxlength="60" placeholder="senha de usuario"> </td><br>
-                        <td><label>SENHA :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td>
-                        <td><input type="password" name="passc2" id="passc2" size="33" maxlength="60" placeholder="repita a senha"/> </td><br>        
-                    <br>
-                    <p>
-                    <input type="submit" name="CADASTRAR" button type="button" class="btn btn-success" value="SALVAR">
-                    
-                    </form>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <div id="cadastro">
+	<h2>CADASTRO DE USUÁRIO</h2>
+	<form action="cadastrar.php" method="post">
+	<div class="line"> 
+	<label for="cadastro">Todas as informações são necessárias:  </label></div><br><br>	
+	<td><label>LOGIN :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td>
+	<td><input type="text" name="user" id="user" size="33" maxlenght="20" value="LOGIN" onfocus="if (this.value=='LOGIN') this.value='';" onblur="if (this.value=='') this.value='LOGIN'" /></td><br>
+	<td><label>NOME :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td>
+	<td><input type="text" name="nome" id="nome" size="33" maxlength="50" value="NOME COMPLETO" onfocus="if (this.value=='NOME COMPLETO') this.value='';" onblur="if (this.value=='') this.value='NOME COMPLETO'" /></td><br>
+	<td><label>SENHA :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td>
+	<td><input type="password" name="passc1" id="passc1" size="33" maxlength="60" value="Assunto*" onfocus="if (this.value=='Assunto*') this.value='';" onblur="if (this.value=='') this.value='Assunto*'" /> </td><br>
+	<td><label>SENHA :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td>
+	<td><input type="password" name="passc2" id="passc2" size="33" maxlength="60"value="Assunto*" onfocus="if (this.value=='Assunto*') this.value='';" onblur="if (this.value=='') this.value='Assunto*'" /> </td><br>
         
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /#page-content-wrapper -->
-
-    </div>
-    <!-- /#wrapper -->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Menu Toggle Script -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
-
-</body>
-
+        <br>
+        <p>
+        <input type="submit" name="CADASTRAR" button type="button" class="btn btn-success" onClick="validarSenha()" value="CADASTRAR">
+        <a href="login.html" type="button" class="btn btn-info">INICIO</a>
+        
 </html>

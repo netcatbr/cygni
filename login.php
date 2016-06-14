@@ -18,7 +18,7 @@ if($row > 0){
     session_start();
     $_SESSION['login'] = $login;
     $_SESSION['senha'] = $passwd;
-    header("location:menu.html");
+    header("location:index.php");
 }else{
     session_destroy();
     unset ($_SESSION['login']);
